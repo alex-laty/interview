@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"interview/internal/config"
 	"interview/internal/logger"
+	"interview/internal/storage/pgsql"
 )
 
 func main() {
@@ -10,5 +12,9 @@ func main() {
 
 	logger := logger.SetupLogger(cfg.Env)
 
-	logger.Info("starting application...");
+	logger.Info("starting application...")
+
+	storage, err := pgsql.New(cfg.DatabaseUrl)
+
+	fmt.Println(*storage, err)
 }

@@ -11,6 +11,7 @@ type Config struct {
 	Env         string     `yaml:"env"`
 	StoragePath string     `yaml:"storage_path" env-required:"true"`
 	HTTPServer  HTTPServer `yaml:"http_server"`
+	DatabaseUrl string 	   `yaml:"database_url"`	
 }
 
 type HTTPServer struct {

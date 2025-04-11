@@ -1,5 +1,6 @@
 env: "local"
 storage_path: "./storage/pgdata"
+database_url: "postgres://test:test@localhost:5430/test?sslmode=disable"
 http_server:
   address: "localhost:8080"
   timeout: 4
