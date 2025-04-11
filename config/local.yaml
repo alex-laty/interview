@@ -1,6 +1,5 @@
-env: "local" # local, stage, prod
+env: "local"
 storage_path: "./storage/pgdata"
 http_server:
   address: "localhost:8080"
-  timeout: 4s
-  iddle_timeout: 60s
+  timeout: 4
